@@ -382,6 +382,17 @@ cursor: default;
    margin-left: 20px;
    transition: 0s;
 }
+
+::selection {
+    background-color: transparent; /* Un jaune vif par exemple */
+}
+
+/* Pour une compatibilité maximale avec les anciens navigateurs Firefox */
+::-moz-selection {
+    background-color: transparent;
+}
+
+
        .footer-contacts a:hover {  text-decoration: underline;}
 
 
@@ -475,15 +486,15 @@ cursor: default;
 
    <section>
        <div class="spec-grid">
-           <div class="spec-item" style="background: linear-gradient(to top, #350770, #350770b3), url('https://civilprom.s3.eu-north-1.amazonaws.com/sport.png') center/cover;">
+           <div class="spec-item" style="background: linear-gradient(to top, #350770, #35077066), url('https://civilprom.s3.eu-north-1.amazonaws.com/sport.png') center/cover;">
                <h2 class="tr" >Sport</h2>
                <p class="tr" data-en="Live sporting events, tournaments and high-speed motion capture." data-fr="Rencontres sportives, tournois et captation de mouvement haute vitesse.">Live sporting events, tournaments and high-speed motion capture.</p>
            </div>
-           <div class="spec-item" style="background: linear-gradient(to top, #1a0a2f, #1a0a2fc2), url('https://civilprom.s3.eu-north-1.amazonaws.com/culture.png') center/cover;">
+           <div class="spec-item" style="background: linear-gradient(to top, #350770, #35077066), url('https://civilprom.s3.eu-north-1.amazonaws.com/culture.png') center/cover;">
                <h2 class="tr" >Culture</h2>
                <p class="tr" data-en="Music festivals, performing arts, and large-scale cultural broadcasts." data-fr="Festivals de musique, arts vivants et diffusions culturelles d'envergure.">Music festivals, performing arts, and large-scale cultural broadcasts.</p>
            </div>
-           <div class="spec-item" style="background: linear-gradient(to top, #1a0a2f, #1a0a2fc2), url('https://civilprom.s3.eu-north-1.amazonaws.com/experience.png') center/cover;">
+           <div class="spec-item" style="background: linear-gradient(to top, #350770, #35077066), url('https://civilprom.s3.eu-north-1.amazonaws.com/experience.png') center/cover;">
                <h2 class="tr" >Experience</h2>
                <p class="tr" data-en="Premium corporate events, brand activations, and immersive roadshows." data-fr="Événements d'entreprise premium, activations de marque et roadshows immersifs.">Premium corporate events, brand activations, and immersive roadshows.</p>
            </div>
@@ -508,7 +519,7 @@ cursor: default;
                <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/lift.png"><div class="equip-card-body"><h4>Scissor Lift</h4><p>Nacelles for high angles.</p></div></div>
                <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/fork.png"><div class="equip-card-body"><h4>Telehandler</h4><p>Télescopiques & site logistics.</p></div></div>
                <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/forklift.png"><div class="equip-card-body"><h4>Forklift</h4><p>Chariots for material handling.</p></div></div>
-               <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/helicopter.png"><div class="equip-card-body"><h4>Helicopter</h4><p>Chariots for material handling.</p></div></div>
+               <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/helicopter.png"><div class="equip-card-body"><h4>Helicopter</h4><p>For filming or transmission.</p></div></div>
                <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/stoffstaff.png"><div class="equip-card-body"><h4>Support Staff</h4><p>Drivers & Site assistance.</p></div></div>
                <div class="equip-card"><img src="https://civilprom.s3.eu-north-1.amazonaws.com/hardstaff.png"><div class="equip-card-body"><h4>Technical Staff</h4><p>Ops, Engineers, Directors.</p></div></div>
            </div>
