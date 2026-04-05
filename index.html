@@ -133,6 +133,18 @@
        }
 
 
+       @media (max-width: 900px) {
+    .hero-content {
+          min-height: 980px;
+    padding-top: 100px;
+    }
+
+    .spec-item {
+   padding: 30px;
+    }
+}
+
+
        /* HERO & SERVICES */
        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
        .overlay { position: absolute; inset: 0; background: #1a0a2f; z-index: 0; }
@@ -389,6 +401,54 @@ cursor: default;
    </style>
 </head>
 <body>
+
+    <script>
+        (function() {
+    // Détection Safari (exclut Chrome sur macOS)
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        // 1. Liste de tes sélecteurs
+        const selectors = [
+            '.btn-contact', 
+            '.services-overlay-card p', 
+            '.spec-item p', 
+            '.physio', 
+            '.equip-card p', 
+            '.city-label', 
+            '.country-block h4', 
+            '.country-block p', 
+            '.footer-copy', 
+            '.footer-contacts a'
+        ];
+
+        // 2. Injection CSS immédiate pour éviter le flash visuel
+        const style = document.createElement('style');
+        style.textContent = selectors.join(', ') + ' { font-weight: 500 !important; }';
+        document.head.appendChild(style);
+
+        // 3. Fonction de forçage JavaScript (pour écraser les styles inline)
+        const applyForceWeight = () => {
+            selectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.style.setProperty('font-weight', '500', 'important');
+                });
+            });
+        };
+
+        // Exécution au chargement du DOM
+        if (document.readyState === 'loading') {
+            window.addEventListener('DOMContentLoaded', applyForceWeight);
+        } else {
+            applyForceWeight();
+        }
+
+        // Exécution finale une fois que tout (images/polices) est chargé
+        window.addEventListener('load', applyForceWeight);
+    }
+})();
+
+    </script>
 
 
    <header>
